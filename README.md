@@ -26,9 +26,9 @@ $ yarn dev
 _Please note: Running it in development mode will NOT send an email to the users - it will only output the contents of the emails._
 
 ## Deploy
-Content coming soon..
+Deploying this as a small Node.js app running on a schedule could not be easier. 
 
-Deploying this as a small Node.js app running on a schedule cannot be easier. Follow the following steps to deploy it to [Heroku](https://dashboard.heroku.com/):
+### [Heroku](https://dashboard.heroku.com/):
 
 1. Create a new app in Heroku. Grab the Heroku git URL in the app's Settings.
 2. Run `git remote add production <Heroku-git-url.git>`, replacing `<Heroku-git-url.git>` with your git URL.
