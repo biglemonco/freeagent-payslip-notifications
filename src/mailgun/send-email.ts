@@ -3,11 +3,6 @@ import moment from 'moment';
 
 import { UserType } from '../types';
 
-const mailgun = Mailgun({
-	apiKey: process.env.MAILGUN_API_KEY || '',
-	domain: process.env.MAILGUN_DOMAIN || ''
-});
-
 const month = moment().format("MMMM")
 
 export const generateEmail = (user: UserType, url: string): string => {
@@ -28,6 +23,12 @@ Please note: This is an automated email. If you want to speak to someone, drop a
 }
 
 export const sendEmail = async (email: string, text: string) => {
+
+	const mailgun = Mailgun({
+		apiKey: process.env.MAILGUN_API_KEY || '',
+		domain: process.env.MAILGUN_DOMAIN || ''
+	});
+
 	await new Promise((resolve, reject) => {
 		mailgun
 			.messages()

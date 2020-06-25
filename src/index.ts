@@ -1,11 +1,11 @@
 import http from 'http';
-import { config } from 'dotenv';
+import * as dotenv from 'dotenv';
 
 import runSchedule from './schedule';
 
 require('@babel/register')({ extensions: ['.js', '.ts'] });
 
-config();
+dotenv.config();
 
 http
 	.createServer(() => {
