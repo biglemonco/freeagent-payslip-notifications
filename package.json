@@ -1,16 +1,17 @@
 {
   "name": "freeagent-payslip-notifications",
   "version": "0.1",
-  "description": "",
+  "description": "Send notifications that payslips are available to your team in FreeAgent.",
   "main": "index.js",
+  "author": "biglemonco",
+  "license": "ISC",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon",
+    "dev": "NODE_ENV=development ts-node src/commands/run-notifications.ts",
+    "watch": "NODE_ENV=development nodemon",
     "build": "babel src --out-dir dist --copy-files --extensions '.ts,.js'",
     "start": "node dist/index.js",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.10.3",
     "@types/node": "^14.0.14",
@@ -18,6 +19,7 @@
     "@types/node-fetch": "^2.5.7",
     "dotenv": "^8.2.0",
     "http": "^0.0.0",
+    "mailgun.js": "^2.0.1",
     "moment": "^2.22.2",
     "node-cron": "^1.2.1",
     "node-fetch": "^1.7.3"
@@ -25,6 +27,7 @@
   "devDependencies": {
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-typescript": "^7.10.1",
