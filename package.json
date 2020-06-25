@@ -1,6 +1,6 @@
 {
   "name": "freeagent-payslip-notifications",
-  "version": "0.1",
+  "version": "1.0.1",
   "description": "Send notifications that payslips are available to your team in FreeAgent.",
   "main": "index.js",
   "author": "Owen Richards <owen@biglemon.co.uk> (https://biglemon.co.uk)",
@@ -9,8 +9,7 @@
     "dev": "NODE_ENV=development ts-node src/commands/run-notifications.ts",
     "watch": "NODE_ENV=development nodemon",
     "build": "babel src --out-dir dist --copy-files --extensions '.ts,.js'",
-    "start": "node dist/index.js",
-    "heroku-postbuild": "npm run build"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.10.3",
