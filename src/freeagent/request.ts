@@ -9,6 +9,7 @@ export const freeAgentRequest = async (
 	body: object = {}
 ): Promise<any> => {
 	try {
+		// TODO: #1 Stop refreshing the access token on every request (15/minute limit)
 		const token: TokenDataType = await requestAccessToken();
 		return freeAgentRequestWithToken(`Bearer ${token.access_token}`, uri, method, JSON.stringify(body));
 	} catch (e) {
