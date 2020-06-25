@@ -33,7 +33,8 @@ Deploying this as a small Node.js app running on a schedule could not be easier.
 1. Create a new app in Heroku. Grab the Heroku git URL in the app's Settings.
 2. Run `git remote add production <Heroku-git-url.git>`, replacing `<Heroku-git-url.git>` with your git URL.
 3. Make sure you that all environment variables listed above (and in `.env.sample`) are configured in the Heroku app settings.
-4. Push your latest version to the new `production` remote.
+4. Add the environment variable `NPM_CONFIG_PRODUCTION=false` (dev dependencies are used to build the app)
+5. Push your latest version to the new `production` remote.
 
 ## Security
 If you discover any security related issues, please email owen@biglemon.co.uk instead of using the issue tracker.
