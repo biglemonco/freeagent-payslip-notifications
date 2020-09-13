@@ -22,7 +22,7 @@
     "mailgun-js": "^0.22.0",
     "moment": "^2.22.2",
     "node-cron": "^1.2.1",
-    "node-fetch": "^1.7.3"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
